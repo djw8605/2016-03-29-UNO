@@ -35,15 +35,6 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
   are not using Eventbrite, or leave it in, since it will not be
   displayed if the 'eventbrite' field in the header is not set.
 -->
-{% if page.eventbrite %}
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="248px"
-  scrolling="auto">
-</iframe>
-{% endif %}
 
 <h2 id="general">General Information</h2>
 
@@ -53,23 +44,6 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
   Edit the general explanatory paragraph below if you want to change
   the pitch.
 -->
-<p>
-  <a href="{{site.swc_site}}">Software Carpentry</a>'s mission
-  is to help scientists and engineers get more research done in less
-  time and with less pain by teaching them basic lab skills for
-  scientific computing.  This hands-on workshop will cover basic
-  concepts and tools, including program design, version control, data
-  management, and task automation.  Participants will be encouraged to
-  help one another and to apply what they have learned to their own
-  research problems.
-</p>
-<p align="center">
-  <em>
-    For more information on what we teach and why,
-    please see our paper
-    "<a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">Best Practices for Scientific Computing</a>".
-  </em>
-</p>
 
 <!--
   AUDIENCE
@@ -80,8 +54,7 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
 <p id="who">
   <strong>Who:</strong>
   The course is aimed at graduate students and other researchers.
-  <strong>You don't need to have any previous knowledge of the tools that will
-    be presented at the workshop.</strong>
+  <strong>This is an intermediate workshop. Users should be familiar with basic Bash and SLURM commands prior to attending.</strong>
 </p>
 
 <!--
@@ -92,16 +65,7 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
   can use http://itouchmap.com/latlong.html to find the lat/long of an
   address.
 -->
-{% if page.latlng %}
-<p id="where">
-  <strong>Where:</strong>
-  {{page.address}}.
-  Get directions with
-  <a href="//www.openstreetmap.org/?mlat={{page.latlng | replace:',','&mlon='}}&zoom=16">OpenStreetMap</a>
-  or
-  <a href="//maps.google.com/maps?q={{page.latlng}}">Google Maps</a>.
-</p>
-{% endif %}
+
 
 <!--
   SPECIAL REQUIREMENTS
@@ -109,12 +73,7 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
   Modify the block below if there are any special requirements.
 -->
 <p id="requirements">
-  <strong>Requirements:</strong> Participants must bring a laptop with a 
-  Mac, Linux, or Windows operating sytem (not a tablet, Chromebook, etc.) that they have administrative privileges
-  on. They should have a few specific software packages installed (listed
-  <a href="#setup">below</a>). They are also required to abide by
-  Software Carpentry's
-  <a href="{{site.swc_site}}/conduct.html">Code of Conduct</a>.
+  <strong>Requirements:</strong> Participants will need to bring a laptop and are encouraged to sign up for an HCC account prior to the event..
 </p>
 
 <!--
@@ -147,10 +106,6 @@ eventbrite:       # optional (insert the alphanumeric key for Eventbrite registr
 <h2 id="schedule">Schedule</h2>
 
 <!-- DO NOT EDIT SURVEY LINKS -->
-<p><em>Surveys</em></p>
-<p>Please be sure to complete these surveys before and after the workshop.</p>
-<p><a href='{{ site.swc_pre_survey }}{{ site.github.project_title }}'>Pre-workshop Survey</a></p>
-<p><a href='{{ site.swc_post_survey }}{{ site.github.project_title }}'>Post-workshop Survey</a></p>
 
 <div class="row">
   <div class="col-md-6">
